@@ -9,7 +9,12 @@ Independente do numero digitado inicialmente.
 
 '''
 
-numero = int(input('Digite um numero inteiro e positivo: '))
+while True:
+    numero = input('Digite um numero inteiro e positivo: ')
+    if str.isdigit(numero):
+        break
+
+numero = int(numero)
 loop = 0
 
 def Collatz(num):
@@ -29,4 +34,5 @@ def Collatz(num):
         loop += 1 
 
 Collatz(numero)
-print(f'Chegou a 1 após {loop}')
+print(f'Resultado chegou em 1 após {loop} iterações')
+
